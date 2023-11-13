@@ -9,21 +9,16 @@ A continuación, se describe los componentes clave y cómo se relacionan entre s
 ![Diagrama de microservicios](https://github.com/Yuberley/Node.js-Microservices/blob/master/docs/mermaid-diagram.png)
 
 **Cliente (Web/Móvil):**
-
-    - Representa a los usuarios finales que interactúan con el sistema a través de una aplicación web o móvil. Este cliente realiza solicitudes al Gateway.
+- Representa a los usuarios finales que interactúan con el sistema a través de una aplicación web o móvil. Este cliente realiza solicitudes al Gateway.
 
 **Gateway (Puerta de enlace):**
-
-    - Actúa como un punto de entrada para los servicios, posiblemente manejando el enrutamiento, la autenticación de las solicitudes y la agregación de respuestas.
+- Actúa como un punto de entrada para los servicios, posiblemente manejando el enrutamiento, la autenticación de las solicitudes y la agregación de respuestas.
 
 **Servicio de Clientes (customer):**
-
-    - Este servicio probablemente gestiona la lógica relacionada con los clientes, como la autenticación, el registro y la gestión de perfiles.
+- Este servicio probablemente gestiona la lógica relacionada con los clientes, como la autenticación, el registro y la gestión de perfiles.
 
 **Servicio de Productos (products):**
-
-    - Este servicio podría encargarse de todo lo relacionado con los productos, incluyendo su gestión, almacenamiento y consulta.
+- Este servicio podría encargarse de todo lo relacionado con los productos, incluyendo su gestión, almacenamiento y consulta.
 
 **Servicio de Compras (shopping):**
-
-    - Este servicio puede ser responsable de la lógica de la cesta de la compra, procesamiento de pedidos y pagos.
+- Este servicio puede ser responsable de la lógica de la cesta de la compra, procesamiento de pedidos y pagos.
