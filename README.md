@@ -8,22 +8,17 @@ A continuación, se describe los componentes clave y cómo se relacionan entre s
 
 ![Diagrama de microservicios](https://github.com/Yuberley/Node.js-Microservices/blob/master/docs/mermaid-diagram.png)
 
-    Servicio de Clientes (customer):
-        Dockerfile: Ver archivo
-        package.json: Ver archivo
-        Este servicio probablemente gestiona la lógica relacionada con los clientes, como la autenticación, el registro y la gestión de perfiles.
+**Cliente (Web/Móvil):** 
+    - Representa a los usuarios finales que interactúan con el sistema a través de una aplicación web o móvil. Este cliente realiza solicitudes al Gateway.
 
-    Servicio de Productos (products):
-        Dockerfile: Ver archivo
-        package.json: Ver archivo
-        Este servicio podría encargarse de todo lo relacionado con los productos, incluyendo su gestión, almacenamiento y consulta.
+**Gateway (Puerta de enlace):**
+    - Actúa como un punto de entrada para los servicios, posiblemente manejando el enrutamiento, la autenticación de las solicitudes y la agregación de respuestas.
 
-    Servicio de Compras (shopping):
-        Dockerfile: Ver archivo
-        package.json: Ver archivo
-        Este servicio puede ser responsable de la lógica de la cesta de la compra, procesamiento de pedidos y pagos.
+**Servicio de Clientes (customer):**
+    - Este servicio probablemente gestiona la lógica relacionada con los clientes, como la autenticación, el registro y la gestión de perfiles.
 
-    Gateway (Puerta de enlace):
-        Dockerfile: Ver archivo
-        package.json: Ver archivo
-        Actúa como un punto de entrada para los servicios, posiblemente manejando el enrutamiento, la autenticación de las solicitudes y la agregación de respuestas.
+**Servicio de Productos (products):**
+    - Este servicio podría encargarse de todo lo relacionado con los productos, incluyendo su gestión, almacenamiento y consulta.
+
+**Servicio de Compras (shopping):**
+    - Este servicio puede ser responsable de la lógica de la cesta de la compra, procesamiento de pedidos y pagos.
