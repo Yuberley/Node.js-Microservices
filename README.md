@@ -6,7 +6,7 @@ Se ha dividido una aplicación monolítica en Arquitectura de Microservicios. El
 ====================================================================================================
 A continuación, se describe los componentes clave y cómo se relacionan entre sí para formar la arquitectura de microservicios:
 
-![Diagrama de microservicios](https://github.com/Yuberley/Node.js-Microservices/blob/master/docs/mermaid-diagram.svg)
+![Diagrama de microservicios](https://github.com/Yuberley/Node.js-Microservices/blob/master/docs/mermaid-diagram.png)
 
     Servicio de Clientes (customer):
         Dockerfile: Ver archivo
