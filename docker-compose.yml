@@ -1,5 +1,19 @@
 version: "3"
 services:
+
+  frontend:
+    build:
+      dockerfile: Dockerfile
+      context: ./frontend
+    container_name: frontend
+    ports:
+      - "3000:3000" # Asegúrate de que el puerto coincida con el que tu app de frontend utiliza
+    volumes:
+      - ./frontend:/app
+      - /app/frontend/node_modules
+    depends_on:
+      - "nosql-db"
+
   nosql-db:
     image: mongo
     ports:
@@ -7,6 +21,7 @@ services:
     container_name: nosql-db
     volumes:
       - ./db/:/data/db
+
   products:
     build:
       dockerfile: Dockerfile
@@ -23,6 +38,7 @@ services:
 
     env_file:
       - ./products/.env.dev
+      
   shopping:
     build:
       dockerfile: Dockerfile
@@ -38,6 +54,8 @@ services:
       - /app/shopping/node_modules
     env_file:
       - ./shopping/.env.dev
+
+      
   customer:
     build:
       dockerfile: Dockerfile
@@ -52,8 +70,10 @@ services:
     volumes:
       - .:/app/
       - /app/customer/node_modules
+      - /app/frontend/node_modules
     env_file:
       - ./customer/.env.dev
+
   nginx-proxy:
     build:
       dockerfile: Dockerfile
