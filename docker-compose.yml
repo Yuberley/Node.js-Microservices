@@ -1,19 +1,6 @@
 version: "3"
 services:
 
-  frontend:
-    build:
-      dockerfile: Dockerfile
-      context: ./frontend
-    container_name: frontend
-    ports:
-      - "3000:3000" # Asegúrate de que el puerto coincida con el que tu app de frontend utiliza
-    volumes:
-      - ./frontend:/app
-      - /app/frontend/node_modules
-    depends_on:
-      - "nosql-db"
-
   nosql-db:
     image: mongo
     ports:
