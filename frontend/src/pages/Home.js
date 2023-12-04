@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { ProductCard } from "../components/ProductCard";
 import { onSignup, onGetProducts  } from '../store/actions'
 import { ProductDetails } from "./ProductDetail";
+import banner from '../assets/img/bg.jpg'
 
 const Home = () => {
   
@@ -34,12 +35,12 @@ const Home = () => {
 
     return (
         
-        <div className="container-fluid p-0">
-           <img src="bg2.jpg" className="card-img" alt="fonde de frutas y verduras"
-            style={{height: '81vh', width: '100%', objectFit: 'cover'}}
+        <div class="container-fluid p-0" style={{ minHeight: '100vh' }}>
+           <img src={banner} class="card-img" alt="banner"
+            style={{ width: '100%', height: '35vh', objectFit: 'cover' }}
            ></img>
-            <div className="container-flud mb-4" style={{height:80, justifyContent: 'center', display: 'flex', flexDirection: 'column', backgroundColor: '#15803D'}}>
-                <div className="row justify-content-center">
+            <div className="container-flud mb-4" style={{height:80, justifyContent: 'center', display: 'flex', flexDirection: 'column', backgroundColor: '#61AB4F'}}>
+                <div class="row justify-content-center">
                   {categories && listOfcategories()}
                 </div>
             </div> 

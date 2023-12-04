@@ -136,12 +136,51 @@ const ProductDetails = (props) => {
                 
                <div className="row bg-white rounded">
                   <div className="col-sm col-md-5 col-lg-5">
-                      <img variant="top" src={setImage()} style={{ width: '100%'}} />
+                      <img variant="top" src={setImage()} 
+                      style={{ width: '100%',
+                      height: '95%',
+                      objectFit: 'cover',
+                      borderRadius: 7,
+                      marginTop: 10,
+                    }} 
+                    />
                   </div>       
                   <div className="col-sm col-md-7 col-lg-7">
                       <div className="row p-3">
                           <span style={{ fontSize: '1.5rem'}}>Category → <span className="font-weight-bold text-secondary">{type}</span></span> 
+                          
+                          {
+                            available ? <span style={{
+                              position: 'absolute',
+                              top: 0,
+                              right: 0,
+                              padding: '0.5rem 1rem',
+                              backgroundColor: '#4E8A37',
+                              color: '#FFF',
+                              borderRadius: 5,
+                              marginRight: 10,
+                              marginTop: 10,
+                            }}>
+                              In Stock
+                            </span>
+                            :
+                            <span style={{
+                              position: 'absolute',
+                              top: 0,
+                              right: 0,
+                              padding: '0.5rem 1rem',
+                              backgroundColor: '#FF0000',
+                              color: '#FFF',
+                              borderRadius: 5,
+                              marginRight: 10,
+                              marginTop: 10,
+
+                            }}>
+                              Out of Stock
+                            </span>
+                          }
                       </div>
+                      
 
                       <div className="row p-3">
                            <span style={{ fontSize: 30, fontWeight: 'normal'}}> Price<span className="pl-2" style={{ fontSize: 30, fontWeight: 'bolder'}}>₹{price}</span></span>
