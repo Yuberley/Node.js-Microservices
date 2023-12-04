@@ -22,3 +22,5 @@ A continuación, se describe los componentes clave y cómo se relacionan entre s
 
 **Servicio de Compras (shopping):**
 - Este servicio puede ser responsable de la lógica de la cesta de la compra, procesamiento de pedidos y pagos.
+- 
+![Diagrama de microservicios](https://i.ibb.co/zFqNqmG/Screenshot-2023-12-04-134041.png)
