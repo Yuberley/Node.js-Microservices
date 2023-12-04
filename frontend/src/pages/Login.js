@@ -34,14 +34,14 @@ const Login = () => {
     }
   
     const loginForm = () => {
-        return (<div className="row bg-secondary" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' ,height: '30rem'}}>
+        return (<div className="row bg-light" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' ,height: '100vh'}}>
                 <div className="col col-sm-5 col-md-4 col-lg-3 col-xl-2">
                     <form>
-                        <div className="from-group" controlId="formBasicEmail">
+                        <div className="from-group" controlid="formBasicEmail">
                             <label>Email address</label>
                             <input className="form-control" type="email" placeholder="Enter email" onChange={(e) => setEmail(e.target.value)} />
                         </div>
-                        <div className="from-group" controlId="formBasicPassword">
+                        <div className="from-group" controlid="formBasicPassword">
                             <label>Password</label>
                             <input className="form-control" type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
                         </div>

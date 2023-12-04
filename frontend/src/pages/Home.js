@@ -34,10 +34,12 @@ const Home = () => {
 
     return (
         
-        <div class="container-fluid p-0">
-           <img src="bg.jpg" class="card-img" alt="..."></img>
-            <div className="container-flud mb-4" style={{height:80, justifyContent: 'center', display: 'flex', flexDirection: 'column', backgroundColor: '#61AB4F'}}>
-                <div class="row justify-content-center">
+        <div className="container-fluid p-0">
+           <img src="bg2.jpg" className="card-img" alt="fonde de frutas y verduras"
+            style={{height: '81vh', width: '100%', objectFit: 'cover'}}
+           ></img>
+            <div className="container-flud mb-4" style={{height:80, justifyContent: 'center', display: 'flex', flexDirection: 'column', backgroundColor: '#15803D'}}>
+                <div className="row justify-content-center">
                   {categories && listOfcategories()}
                 </div>
             </div> 

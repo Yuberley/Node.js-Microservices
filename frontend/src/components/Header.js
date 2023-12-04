@@ -23,16 +23,16 @@ export const Header = () => {
 
         if(token){
             return (
-                <ul class="navbar-nav">
-                    <li class="nav-item" style={{ backgroundColor: '#97C885', width: 90, borderRadius: 50}}>
+                <ul className="navbar-nav">
+                    <li className="nav-item" style={{ backgroundColor: '#97C885', width: 90, borderRadius: 50}}>
                         <Link to="/login" href="#" className="btn-lg nav-link text-white">
-                        <i class="fas fa-shopping-cart"></i>
+                        <i className="fas fa-shopping-cart"></i>
                             <span className="ml-3" style={{ fontSize: '1.1rem', fontWeight: 'bold'}}>{cartCount()}</span>
                         </Link>
                     </li> 
-                    <li class="nav-item">
+                    <li className="nav-item">
                         <Link to="/login" className="btn-lg nav-link text-white">
-                            <i class="fas fa-user"></i>
+                            <i className="fas fa-user"></i>
                             <span className="ml-1"></span>
                         </Link>
                     </li>
@@ -42,15 +42,15 @@ export const Header = () => {
         }else{
 
             return (
-                <ul class="navbar-nav">
-                     <li class="nav-item">
+                <ul className="navbar-nav">
+                     <li className="nav-item">
                         <a href="#" className="btn-lg nav-link text-warning">
-                        <i class="fas fa-shopping-cart"></i>
+                        <i className="fas fa-shopping-cart"></i>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li className="nav-item">
                         <Link to="/login" className="btn-lg nav-link text-white">
-                            <i class="fas fa-user"></i>
+                            <i className="fas fa-user"></i>
                             <span className="ml-1">Login</span>
                         </Link>
                     </li>   
@@ -63,14 +63,14 @@ export const Header = () => {
     }
     
 
-   return ( <nav class="navbar navbar-expand-sm navbar-light border-bottom" style={{ backgroundColor: '#61AB4F'}}>
-            <div class="container-fluid">
-                <a href="#"><Link class="navbar-brand text-white" to="/">Online Shopping</Link></a>
-                <button class="navbar-toggler btn-lg" data-toggle="collapse" data-target="#navbarNav">
-                    <i class="fa fa-bars" aria-hidden="true" style={{ backgroundColor: '#4DA052', color: '#FFF'}}></i>
+   return ( <nav className="navbar navbar-expand-sm navbar-light " style={{ backgroundColor: '#15803D'}}>
+            <div className="container-fluid">
+                <a href="#"><Link className="navbar-brand text-white" to="/">Online Shopping</Link></a>
+                <button className="navbar-toggler btn-lg" data-toggle="collapse" data-target="#navbarNav">
+                    <i className="fa fa-bars" aria-hidden="true" style={{ backgroundColor: '#4DA052', color: '#FFF'}}></i>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav m-auto">
+                <div className="collapse navbar-collapse" id="navbarNav">
+                    <ul className="navbar-nav m-auto">
                     </ul>
                     {loginProfile()}
                 </div>
