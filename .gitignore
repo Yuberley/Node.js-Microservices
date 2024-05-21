@@ -1,5 +1,5 @@
 .DS_Store
-# **/.env
-# **/.env.dev
+**/.env
+**/.env.dev
 **/.DS_Store
 **/node_modules
