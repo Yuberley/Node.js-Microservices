@@ -24,10 +24,6 @@ jobs:
         run: |
           cd products
           npm install
-      - name: Build Project
-        run: |
-          cd products
-          npm run build
       - name: Deploy to Azure App Service
         uses: azure/webapps-deploy@v2
         with:
@@ -51,10 +47,6 @@ jobs:
         run: |
           cd customer
           npm install
-      - name: Build Project
-        run: |
-          cd customer
-          npm run build
       - name: Deploy to Azure App Service
         uses: azure/webapps-deploy@v2
         with:
@@ -78,10 +70,6 @@ jobs:
         run: |
           cd shopping
           npm install
-      - name: Build Project
-        run: |
-          cd shopping
-          npm run build
       - name: Deploy to Azure App Service
         uses: azure/webapps-deploy@v2
         with:
