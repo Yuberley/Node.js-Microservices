@@ -1,0 +1,90 @@
+name: Deploy Microservices to Azure App Service
+
+on:
+  push:
+    branches:
+      - products
+      - customer
+      - shopping
+
+jobs:
+  deploy-products:
+    if: github.ref == 'refs/heads/products'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v3
+        with:
+          ref: products
+      - name: Setup Node.js version
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+      - name: Install Dependencies
+        run: |
+          cd products
+          npm install
+      - name: Build Project
+        run: |
+          cd products
+          npm run build
+      - name: Deploy to Azure App Service
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: products-app-service
+          publish-profile: ${{ secrets.PRODUCTS_AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: products
+
+  deploy-customer:
+    if: github.ref == 'refs/heads/customer'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v3
+        with:
+          ref: customer
+      - name: Setup Node.js version
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+      - name: Install Dependencies
+        run: |
+          cd customer
+          npm install
+      - name: Build Project
+        run: |
+          cd customer
+          npm run build
+      - name: Deploy to Azure App Service
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: customer-app-service
+          publish-profile: ${{ secrets.CUSTOMER_AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: customer
+
+  deploy-shopping:
+    if: github.ref == 'refs/heads/shopping'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v3
+        with:
+          ref: shopping
+      - name: Setup Node.js version
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+      - name: Install Dependencies
+        run: |
+          cd shopping
+          npm install
+      - name: Build Project
+        run: |
+          cd shopping
+          npm run build
+      - name: Deploy to Azure App Service
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: shopping-app-service
+          publish-profile: ${{ secrets.SHOPPING_AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: shopping
