@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=prod node src/index.js",
-    "dev": "cross-env NODE_ENV=dev nodemon src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "start": "npx cross-env NODE_ENV=prod node src/index.js",
+    "dev": "npx cross-env NODE_ENV=dev nodemon src/index.js"
+  },  
   "keywords": [],
   "author": "",
   "license": "ISC",

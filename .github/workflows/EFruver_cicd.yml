@@ -47,6 +47,9 @@ jobs:
         run: |
           cd customer
           npm install
+      - name: Verify Node Modules
+        run: ls -la node_modules/cross-env/src/bin
+        
       - name: Deploy to Azure App Service
         uses: azure/webapps-deploy@v2
         with:
