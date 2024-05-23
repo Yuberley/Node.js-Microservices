@@ -1,6 +1,16 @@
 const dotEnv = require("dotenv");
 dotEnv.config();
 
+// print all variables
+
+console.log("PORT: ", process.env.PORT);
+console.log("MONGODB_URI: ", process.env.MONGODB_URI);
+console.log("APP_SECRET: ", process.env.APP_SECRET);
+console.log("EXCHANGE_NAME: ", process.env.EXCHANGE_NAME);
+console.log("MSG_QUEUE_URL: ", process.env.MSG_QUEUE_URL);
+
+console.log(" ");
+
 module.exports = {
     PORT: process.env.PORT,
     DB_URL: process.env.MONGODB_URI,
