@@ -12,7 +12,7 @@ console.log("MSG_QUEUE_URL: ", process.env.MSG_QUEUE_URL);
 console.log(" ");
 
 module.exports = {
-    PORT: process.env.PORT || 3000,
+    PORT: process.env.PORT || 8002,
     DB_URL: process.env.MONGODB_URI,
     APP_SECRET: process.env.APP_SECRET,
     BASE_URL: process.env.BASE_URL,
